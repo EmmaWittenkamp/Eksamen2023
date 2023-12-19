@@ -1,0 +1,1091 @@
+/* Jeg resetter min css kode*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------- Font -------------------- */
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * niagara:
+ *   - http://typekit.com/eulas/00000000000000003b9ae843
+ *
+ * © 2009-2023 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2023-12-12 11:53:46 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=zlt1ber&ht=tk&f=31220&a=167463033&app=typekit&e=css");
+
+
+@font-face {
+font-family:"niagara";
+src:url("https://use.typekit.net/af/0dc2ce/00000000000000003b9ae843/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/0dc2ce/00000000000000003b9ae843/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/0dc2ce/00000000000000003b9ae843/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+.tk-niagara { font-family: "niagara",serif; }
+
+@import url("https://use.typekit.net/zlt1ber.css");
+
+@font-face {
+    font-family:"ltc-nicholas-cochin-pro";
+    src:url("https://use.typekit.net/af/c5014f/00000000000000007736d899/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/c5014f/00000000000000007736d899/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/c5014f/00000000000000007736d899/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+    }
+
+
+
+
+/* ---------------- Vores css starter her ------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Helvetica, sans-serif;
+    background-color: #ffff;
+  }
+  
+  a {
+    color: #000;
+  }
+
+  
+  /* ------------------------ header med burgermenu og søgefunktion ---------------------------- */
+
+
+  .header {
+    background-color: #ffffff;
+    width: 100%;
+    z-index: 3;
+    position: fixed;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+    border-bottom: solid #000000 2px;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.7rem;
+    font-family: "niagara", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #ffffff;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    background-color: #ffff;
+  }
+
+  /*submenu*/
+
+  .submenu {
+    border: none;
+  }
+
+  .submenu li {
+    cursor: pointer;
+  }
+
+  .menu li{
+    position: relative;
+  }
+  .menu li ul {
+    display: none;
+    position: relative;
+    background-color: #c6c3c3; /* Baggrundsfarve for submenu */
+    width: 100%;
+    height: fit-content;
+    border: none;
+}
+
+  .menu li:hover ul {
+    display: block;
+}
+
+  .menu li ul li {
+    float:none; 
+    position: relative;
+}
+.menu li ul li:hover {
+  background-color: #ffff;
+}
+
+.menu li ul li a{
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    display: inline-block;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #000000;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: 0.2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #090909;
+    content: '';
+    display: block;
+    height: 100%; 
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: fit-content;
+    
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  .menu-punkt {
+    text-align: center;
+  }
+
+  /* Logo */
+  .logo {
+    width: 60px;
+  }
+
+  /* Shoppingbag */
+  .shoppingbag-image {
+    width: 2rem;
+    padding: 28px 20px;
+}
+
+/* Footer-sektion */
+
+.footer__menu{
+    font-size: 0.75rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: solid #000;
+    border-bottom: #fff;
+    border-right: #fff;
+    border-left: #fff;
+    padding-top: 2%;
+}
+
+.footer__text1{
+    font-weight: bold;
+}
+
+.footer-sektion1{
+    padding-bottom: 3%;
+    padding-left: 3%;
+}
+
+.footer-sektion2{
+    padding-bottom: 3%;
+    padding-left: 3%;
+}
+
+.footer-sektion3{
+    padding-left: 3%;
+}
+
+.footer-ikoner{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.ikoner{
+    width: 9%;
+    padding: 1%;
+    margin-top: -10%;
+}
+
+/* Forside */
+
+/* Forsidebillede */
+.forside-billede{
+    width: 100%;
+    padding-top: 20%;
+}
+
+/* Forside-tekst */
+.forside-text{
+    font-family: "niagara", serif;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: -70%;
+    margin-bottom: 100%;
+}
+
+/* Produkt - Button. Taget fra W3Schools */
+.produkt-knap{
+    border: solid 1px black;
+    color: black;
+    background-color: white;
+    font-size: 0.9rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px 20px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.knap{
+    display: flex;
+    justify-content: center;
+    margin-top: -50%;
+    margin-bottom: 80%;  
+}
+
+.knap a {
+    text-decoration: none;
+}
+
+.produkt-knap:hover{
+    border: #fff;
+    background-color: #c6c3c3;
+    color:white;
+}
+
+/* Kampagne  på forside */
+.kampagne-overskrift{
+    text-align: center;
+    margin-top: -190%;
+    font-size: 4.5rem;
+    font-family: "niagara", serif;
+}
+
+.liggende-oel1{
+    width: 100%;
+    margin-top: -50%;
+    margin-bottom: 110%;
+}
+
+.kampagne-text{
+    font-size: 1.3rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    margin-top: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.troejborgbryg{
+    font-size: 1.8rem;
+    font-family: "niagara", serif;
+    text-align: center;
+    margin-top: 2%;
+}
+
+/* Kampagne - button */
+
+.kampagne-knap{
+    border: solid 1px black;
+    color: black;
+    background-color: white;
+    font-size: 0.9rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px 20px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.kampagne-knap:hover{
+    border: #fff;
+    background-color: #c6c3c3;
+    color:white;
+}
+
+.knap2{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+/* "Om os" på forside */
+/* Billede */
+.to-oel1{
+    width: 100%;
+    margin-top: 30%;
+    position: relative;
+}
+
+/* Tekst */
+.omos-text{
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: -92.5%;
+    margin-bottom: 110%;
+    padding-left: 33%;
+    position: relative;
+}
+
+.troejborgbryg1{
+    margin-left: -25%;
+    margin-top: 3%;
+}
+
+/* Klik her - button */
+.klik-her{
+    border: solid rgb(255, 255, 255);
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px 40px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.klik-her:hover{
+    border: #fff;
+    background-color: #c6c3c3;
+    color:white;
+}
+
+.knap3{
+    display: flex;
+    justify-content: start;
+    position: absolute;
+    margin-top: -95%;
+    margin-left: 5%;
+}
+
+/* Underside, produktside */
+/* Gradient-billede på produktside */
+.gradient-billede{
+    width: 100%;
+    padding-top: 15%;
+}
+
+/* Tekst på produktside */
+.vores-produkter{
+    font-size: 2.5rem;
+    font-family: "niagara", serif;
+    margin-top: -80%;
+}
+
+.produkt-text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.1rem;
+    text-align:center;
+    padding: 10% 10%;
+    margin-top: -30%;
+}
+
+.produktside-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Produktside billeder */
+.alle-oel img{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+.lysegroen{
+    min-width: 60%;
+    margin-left: 10%;
+}
+
+.gul{
+    min-width: 65%;
+}
+
+.sort{
+    min-width: 65%;
+}
+
+.orange{
+    margin-left: -50%;
+}
+
+.roed{
+    min-width: 60%;
+    margin-left: 5%;
+}
+
+/* Lys øl - button */
+.lys-knap{
+    border: solid 1px rgb(5, 5, 5);
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px 50px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.lys-knap:hover{
+    border: #fff;
+    background-color: #c6c3c3;
+    color:white;
+}
+
+.knap4{
+    margin-bottom: 15%;
+    margin-left: 27%;
+}
+
+/* Mørk øl - button */
+.moerk-knap{
+    border: solid 1px rgb(5, 5, 5);
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px 50px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.moerk-knap:hover{
+    border: #fff;
+    background-color: #c6c3c3;
+    color:white;
+}
+
+.knap5{
+    margin-bottom: 15%;
+    margin-left: 25%;
+}
+
+/* IPA - button */
+.ipa-knap{
+    border: solid 1px rgb(5, 5, 5);
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px 65px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.ipa-knap:hover{
+    border: #fff;
+    background-color: #c6c3c3;
+    color:white;
+}
+
+.knap6{
+    margin-bottom: 15%;
+    margin-left: 27%;
+    margin-top: -5%;
+}
+
+/* Porter - button */
+.porter-knap{
+    border: solid 1px rgb(5, 5, 5);
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px 55px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.porter-knap:hover{
+    border: #fff;
+    background-color: #c6c3c3;
+    color:white;
+}
+
+.knap7{
+    margin-bottom: 15%;
+    margin-left: 27%;
+}
+
+/* ALE - button */
+.ale-knap{
+    border: solid 1px rgb(5, 5, 5);
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px 60px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.ale-knap:hover{
+    border: #fff;
+    background-color: #c6c3c3;
+    color:white;
+}
+
+.knap8{
+    margin-bottom: 15%;
+    margin-left: 27%;
+}
+
+/* Juleøl - button */
+.jule-knap{
+    border: solid 1px rgb(5, 5, 5);
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px 55px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.jule-knap:hover{
+    border: #fff;
+    background-color: #c6c3c3;
+    color:white;
+}
+
+.knap9{
+    margin-bottom: 15%;
+    margin-left: 27%;
+}
+
+/* Underside - Om TrøjborgBryg */
+/* Billede på Om TrøjborgBryg */
+.bryghus{
+    width: 100%;
+    margin-top: 23%;
+}
+
+.tre-oel{
+    width: 60%;
+    margin-left: 20%;
+}
+
+.to-oel3{
+    width: 70%;
+    margin-left: 25%;
+}
+
+/* Tekst på om TrøjborgBryg */
+.bryg{
+    font-family: "niagara", serif;
+    font-size: 2.5rem;
+    color: #fcf9f9;
+    margin-top: -60%;
+    margin-bottom: 50%;
+    margin-left: 5%;
+}
+.om-text p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 0.95rem;
+    text-align: justify;
+    line-height: 1.3em;
+    hyphens: auto;
+    margin: 7.5% 7.5%;
+}
+
+/* Kampagne - underside */
+/* Kampagnetekst */
+.kampagne-del{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.kampagne-overskrift2{
+    font-family: "niagara", serif;
+    font-size: 3.5rem;
+    margin-top: -40%;
+    margin-bottom: 20%;
+}
+
+.broedtekst{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 5% 5%;
+    margin-top: -5%;
+}
+
+.broedtekst2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
+    margin-top: 5%;
+}
+
+.smag{
+   margin-left: 10%;
+   margin-top: 5%;
+}
+
+/* Kampagnebilleder */
+.liggende{
+    width: 80%;
+    margin-top: 10%;
+}
+
+.tre-oel2{
+    width: 100%;
+    margin-top: 5%;
+}
+
+  /* Media - desktop */
+    @media (min-width: 1070px) {
+      
+      /* header*/
+      .header {
+        margin-top: -50px;
+      }
+      .header li {
+        float: left;
+      }
+      .header li a {
+        font-size: 2rem;
+        padding: 10px 50px;
+        justify-content: space-between;
+      }
+      .header .menu {
+        clear: none;
+        max-height: none;
+        justify-content: left;
+        padding-left: 100px;
+        margin-top: -74px;
+      }
+      .header .menu-icon {
+        display: none;
+      }
+
+    
+      .logo{
+        width: 100px;
+        display: block;
+        padding: 50px 0px 20px 0px;
+      }
+
+      .shoppingbag-image {
+        margin-top: 100px;
+    }
+    
+  
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        background-color:#bbb7b7; 
+      }
+
+
+  
+      .menu li ul {
+        border-bottom: none;
+      }
+      
+      /* Footer-sektion */
+      .footer__menu{
+        display: flex;
+        flex-direction: row;
+        font-size: 0.8rem;
+        margin-right: 70%;
+        border: #fff;
+        margin-top: -2%;
+      }
+
+      .footer-sektion1{
+        padding: 2%;
+        margin-right: 10%;
+      }
+
+      .footer-sektion2{
+        padding: 2%;
+      }
+      
+      .footer-sektion3{
+        padding: 2%;
+        margin-left: 10%;
+      }
+
+      .ikoner{
+        padding: 0;
+        margin: 0;
+        width: 3%;
+        margin-top: -2%;
+        padding: 0.5%;
+      }
+
+      .footer{
+        border-top: solid black;
+      }
+
+      /* Billede på forside */
+      .forside-billede{
+        padding-top: 0;
+      }
+
+      /* Forside-tekst */
+      .forside-text{
+        font-size: 5rem;
+        padding-top: 5%;
+      }
+
+      /* Button */
+      .produkt-knap{
+        font-size: 1.5rem;
+      }
+        
+
+      /* Kampagne på forside */
+
+      .liggende-oel1{
+        position: relative;
+        width: 40%;
+        padding-left: 15%;
+        margin: 0;
+        margin-top: -60%;
+        margin-bottom: 70%;
+      }
+
+      .kampagne-overskrift{
+        font-size: 8rem;
+        padding-top: 95%;
+        padding-left: 35%;
+      }
+
+      .kampagne-text{
+        font-size: 1.75rem;
+        margin-top: 2%;
+        margin-left: 36%;
+      }
+
+      .troejborgbryg{
+        font-size: 2.5rem;
+        margin-left: 35%;
+      }
+
+      .kampagne{
+        padding: 0;
+        margin: 0;
+      }
+
+      /* Kampagne-button */
+      .kampagne-knap{
+        font-size: 1.5rem;
+      }
+
+      .knap2{
+        margin-top: -35%;
+        margin-bottom: 50%;
+      }
+
+      /* "Om os" på forside */
+       .to-oel{
+        width: 50%;
+        padding-left: 20%;
+        margin-top: -45%;
+      }
+
+        .omos-text{
+        font-size: 2.5rem;
+        position: absolute;
+        margin-top: -45%;
+      } 
+
+      /* Klik-her-button */
+
+      .klik-her{
+        font-size: 2.5rem;
+      } 
+
+       .knap3{
+        margin-left: 18%;
+        margin-top: -46%;
+       } 
+
+      .troejborgbryg1{
+        margin-top: 5%;
+        margin-left: -37%;
+      } 
+
+      /* Underside - produktside */
+      /* Gradient-billede på produktside */
+      .gradient-billede{
+        padding-top: 5%;
+      }
+
+      /* Tekst på produktside */
+      .vores-produkter{
+        font-size: 5rem;
+        margin-top: -70%;
+      }
+
+      .produkt-text{
+        font-size: 2rem;
+        margin-top: -50%;
+        text-align: center;
+        max-width: 70%;
+      }
+
+      /* Produktside billeder */
+      .alle-oel{
+        margin-top: -15%;
+      } 
+
+      /* Produkt-row */
+      .row1{
+        display: flex;
+        flex-direction: row;
+        margin-left: 7%;
+        align-items: center;
+      }
+
+      .row2{
+        display: flex;
+        flex-direction: row;
+        margin-left: 7%;
+        align-items: center;
+      }
+
+      .row1 .lys-knap{
+        padding: 5px 65px;
+      }
+
+      .row1 .moerk-knap{
+        padding: 5px 65px;
+      }
+
+      .row1 .ipa-knap{
+        padding: 5px 70px;
+        margin-left: 6%;
+      }
+
+      .row1 .moerkeroed{
+        width: 60%;
+      } 
+
+      .row1 .gul{
+        width: 65%;
+        margin-top: -0.5%;
+      }
+
+      .knap7{
+        margin-left: 30%;
+        margin-top: -3%;
+      }
+
+
+      .row2 .orange{
+        width: 63%;
+      }
+
+      .knap8{
+        margin-left: 30%;
+      }
+
+      .ale-knap{
+        padding: 5px 25%;
+      }
+
+      .row2 .roed{
+        width: 63%;
+      }
+
+      .knap9{
+        margin-left: 33%;
+        margin-top: -3%;
+      }
+
+      .jule-knap{
+        padding: 5px 60px;
+      }
+
+      /* Om TrøjborgBryg - underside */
+      /* Billeder på siden */
+      .bryghus{
+        width: 100%;
+        margin: 0;
+        margin-top: 8%;
+      }
+
+      .tre-oel{
+        width: 40%;
+         margin-top: 15%;
+         margin-bottom: -10%;
+         padding-left: 10%;
+      }
+      .to-oel3{
+        width: 40%;
+        margin-top: 10%;
+        padding-left: 18%;
+      }
+
+      /* Tekst på om TrøjborgBryg */
+      .bryg{
+        font-size: 7rem;
+      }
+
+      .om-text p{
+        font-size: 1.5rem;
+        margin: 15% 20%;
+        margin-bottom: -10%;
+       line-height: 1.8em;
+      }
+
+      /* Kampagne - underside */
+      /* Kampagnetekst */
+      .kampagne-del{
+        margin-top: 5%; 
+      }
+      .kampagne-overskrift2{
+        font-size: 7rem;
+        margin-top: -45%;
+      }
+
+      .broedtekst{
+        font-size: 2.5rem;
+        margin-top: -12%;
+        padding: 0% 20%;
+      }
+
+      .broedtekst2{
+        font-size: 2.5rem;
+        margin-top: -0.5%;
+      }
+
+      /* Kampagnebilleder */
+      .gradient-billede{
+        margin-top: -20%;
+      }
+      .liggende{
+        width: 50%;
+        margin-top: -0.25%;
+      }
+
+      .tre-oel2{
+        width: 50%;
+        margin-left: 25%;
+      }
+
+     }
